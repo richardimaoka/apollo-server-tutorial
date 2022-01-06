@@ -6,6 +6,15 @@ const typeDefs = gql`
     boolean: Boolean
     int: Int
     float: Float
+
+    arrayOfInt: [Int]
+    arrayOfObj: [MyObj]
+  }
+
+  type MyObj {
+    id: ID
+    int: Int
+    float: Float
   }
 `;
 
