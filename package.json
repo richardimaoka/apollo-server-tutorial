@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node-dev --respawn index.ts",
-    "start2": "ts-node-dev --respawn index2.ts"
+    "start2": "ts-node-dev --respawn index2.ts",
+    "start3": "ts-node-dev --respawn index3.ts"
   },
   "author": "",
   "license": "ISC",
