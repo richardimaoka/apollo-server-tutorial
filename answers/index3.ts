@@ -2,7 +2,19 @@ import { ApolloServer, gql } from "apollo-server";
 
 const typeDefs = gql`
   type Query {
-    books: Array
+    hello: String
+    boolean: Boolean
+    int: Int
+    float: Float
+
+    arrayOfInt: [Int]
+    arrayOfObjs: [MyObj]
+  }
+
+  type MyObj {
+    id: ID
+    int: Int
+    float: Float
   }
 `;
 

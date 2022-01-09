@@ -8,13 +8,6 @@ const typeDefs = gql`
     float: Float
 
     arrayOfInt: [Int]
-    arrayOfObj: [MyObj]
-  }
-
-  type MyObj {
-    id: ID
-    int: Int
-    float: Float
   }
 `;
 
