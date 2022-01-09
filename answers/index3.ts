@@ -3,18 +3,11 @@ import { ApolloServer, gql } from "apollo-server";
 const typeDefs = gql`
   type Query {
     hello: String
-    boolean: Boolean
-    int: Int
-    float: Float
+    booleanValue: Boolean
+    intValue: Int
+    floatValue: Float
 
-    arrayOfInt: [Int]
-    arrayOfObjs: [MyObj]
-  }
-
-  type MyObj {
-    id: ID
-    int: Int
-    float: Float
+    arrayOfInts: [Int]
   }
 `;
 

@@ -3,13 +3,10 @@ import { ApolloServer, gql } from "apollo-server";
 const typeDefs = gql`
   type Query {
     hello: String
-    booleanValue: Boolean
-    intValue: Int
-    floatValue: Float
   }
 `;
 
-const server = new ApolloServer({ typeDefs, mocks: true });
+const server = new ApolloServer({ typeDefs });
 
 // The `listen` method launches a web server.
 server.listen().then(({ url }) => {
