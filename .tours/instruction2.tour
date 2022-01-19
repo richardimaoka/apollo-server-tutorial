@@ -7,6 +7,21 @@
       "description": "Action: ターミナルで以下のコマンドを実行してください\n\n>> npm init -yes\n\nResult: `package.json` が生成されます\n\nAction: 以下のコマンドを入力してください。\n\n>> npm install typescript\n\nAction: 以下のコマンドを入力してください。\n\n>> npx tsc -init\n\nResult: `tsconfig.json` が生成されます\n\nこれでTypeScriptを実行する環境が整いました。次の数アクションで簡単なTypeScriptコードを実行してみます。"
     },
     {
+      "file": "package-lock.json",
+      "description": "`package.json`が生成されました。",
+      "line": 35,
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 1
+        },
+        "end": {
+          "line": 36,
+          "character": 1
+        }
+      }
+    },
+    {
       "file": "answers/index0.ts",
       "description": "Action: 以下のコマンドを入力してください。\n\n>> cp answers/index0.ts index.ts",
       "pattern": "^[^\\S\\n]*console\\.log\\(s\\);"
@@ -15,6 +30,11 @@
       "file": "index.ts",
       "description": "ファイルがコピーされました",
       "pattern": "^[^\\S\\n]*console\\.log\\(s\\);"
+    },
+    {
+      "file": "package.json",
+      "description": "TypeScriptをwatchして実行するための `ts-node-dev` を導入します。\n\nAction: 以下のコマンドを入力してください。\n\n>> npm install ts-node-dev\n\nAction: 以下のコマンドを入力してください。\n\n>> npm run start\n\n\nAction: 以下のコマンドを入力してください。\n\n>> npm set-script start \"ts-node-dev --respawn index.ts\"\n\n\nAction: 以下のコマンドを入力してください。\n\n>> npm run start",
+      "pattern": "^[^\\S\\n]*\"typescript\": \"\\^4\\.5\\.4\""
     }
   ]
 }
