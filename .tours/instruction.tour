@@ -1,0 +1,39 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "instruction",
+  "steps": [
+    {
+      "file": "README.md",
+      "description": "以下をクリックして実行してください。\n\n>> npm init -yes\n",
+      "line": 75,
+      "title": "npm init -yes"
+    },
+    {
+      "file": "answers/index0.ts",
+      "description": ">> cp answers/index0.ts index.ts",
+      "pattern": "^[^\\S\\n]*console\\.log\\(s\\);"
+    },
+    {
+      "description": "以下をクリックして実行してください\n\n>> npm install typescript",
+      "title": "npm install typescript"
+    },
+    {
+      "title": "npx tsc -init",
+      "description": ">> npx tsc -init"
+    },
+    {
+      "title": "npm install ts-node-dev",
+      "description": ">> npm install ts-node-dev"
+    },
+    {
+      "file": "package.json",
+      "description": ">> npm set-script start \"ts-node-dev --respawn index.ts\"",
+      "pattern": "^[^\\S\\n]*\"scripts\": \\{"
+    },
+    {
+      "file": "package.json",
+      "description": ">> npm run start",
+      "pattern": "^[^\\S\\n]*\"start\": \"ts-node-dev --respawn index\\.ts\""
+    }
+  ]
+}
