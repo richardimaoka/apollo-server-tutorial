@@ -1,0 +1,10 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "instruction2",
+  "steps": [
+    {
+      "title": "page1",
+      "description": "Action: 以下のコマンドを入力してください\n\n>> npm init -yes\n\nAction: 以下のコマンドを入力してください\n\n>> npm install typescript\n\nAction: 以下のコマンドを入力してください\n\n>> npx tsc -init\n\nAction: 以下のコマンドを入力してください\n\n>> cp answers/index0.ts index.ts\n\nAction: 以下のコマンドを入力してください\n\n>> npm install ts-node-dev\n\nAction: 以下のコマンドを入力してください\n\n---\n\n>> npm run start\n"
+    }
+  ]
+}
