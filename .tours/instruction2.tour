@@ -4,7 +4,27 @@
   "steps": [
     {
       "title": "page1",
-      "description": "Action: ターミナルで以下のコマンドを実行してください\n\n>> npm init -yes"
+      "description": "Action: ターミナルで以下のコマンドを実行してください\n\n>> npm init -yes\n\nResult: `package.json` が生成されます\n\n[git diffを確認] workbench.view.\n\nAction: 以下のコマンドを入力してください。\n\n>> npm install typescript\n\nAction: 以下のコマンドを入力してください。\n\n>> npx tsc -init\n\nResult: `tsconfig.json` が生成されます\n\n[git diffを確認](command:workbench.view.scm)\n"
+    },
+    {
+      "file": "package-lock.json",
+      "description": "1",
+      "pattern": "^[^\\S\\n]*\\{"
+    },
+    {
+      "file": "package.json",
+      "description": "2",
+      "pattern": "^[^\\S\\n]*\\{"
+    },
+    {
+      "file": "tsconfig.json",
+      "description": "3",
+      "pattern": "^[^\\S\\n]*\\{"
+    },
+    {
+      "file": ".tours/instruction2.tour",
+      "description": "4",
+      "line": 1
     },
     {
       "file": "package.json",
