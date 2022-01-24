@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/richardimaoka/apollo-server-tutorial/issues"
   },
-  "homepage": "https://github.com/richardimaoka/apollo-server-tutorial#readme"
+  "homepage": "https://github.com/richardimaoka/apollo-server-tutorial#readme",
+  "dependencies": {
+    "typescript": "^4.5.5"
+  }
 }
