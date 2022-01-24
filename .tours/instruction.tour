@@ -3,37 +3,8 @@
   "title": "instruction",
   "steps": [
     {
-      "file": "README.md",
-      "description": "以下をクリックして実行してください。\n\n>> npm init -yes\n",
-      "line": 75,
-      "title": "npm init -yes"
-    },
-    {
-      "file": "answers/index0.ts",
-      "description": ">> cp answers/index0.ts index.ts",
-      "pattern": "^[^\\S\\n]*console\\.log\\(s\\);"
-    },
-    {
-      "description": "以下をクリックして実行してください\n\n>> npm install typescript",
-      "title": "npm install typescript"
-    },
-    {
-      "title": "npx tsc -init",
-      "description": ">> npx tsc -init"
-    },
-    {
-      "title": "npm install ts-node-dev",
-      "description": ">> npm install ts-node-dev"
-    },
-    {
-      "file": "package.json",
-      "description": ">> npm set-script start \"ts-node-dev --respawn index.ts\"",
-      "pattern": "^[^\\S\\n]*\"scripts\": \\{"
-    },
-    {
-      "file": "package.json",
-      "description": ">> npm run start",
-      "pattern": "^[^\\S\\n]*\"start\": \"ts-node-dev --respawn index\\.ts\""
+      "title": "page1",
+      "description": "Action: ターミナルで以下のコマンドを実行してください\n\n>> npm init -yes\n\nResult: `package.json` が生成されます\n\nAction: 以下のコマンドを入力してください。\n\n>> npm install typescript\n\nAction: 以下のコマンドを入力してください。\n\n>> npx tsc -init\n\nResult: `tsconfig.json` が生成されます\n\n次に、TypeScriptをwatchして実行するための `ts-node-dev` を導入します。\n\nAction: 以下のコマンドを入力してください。\n\n>> npm install ts-node-dev\n\nAction: 以下のコマンドを入力してください。\n\n>> npm set-script start \"ts-node-dev --respawn index.ts\"\n\nAction: 以下のコマンドを入力してください。\n\n>> cp answers/index0.ts index.ts\n\nAction: 以下のコマンドを入力してください。\n\n>> npm run start\n\n(注意)次のステップを実行すると別画面へ飛びます。CodeTourに戻ってくるには、VS Codeでもう一度File Explorerを開いて、左下のCODETOURを開いてください。\n\n[git diffを確認](command:workbench.view.scm)\n\nAction: Ctrl+Cでターミナルの`npm run start`を停止してください。\n\nAction: 以下のコマンドを入力してください。\n\n>> git add --all\n\n>> git commit -m \"initial commit\""
     }
   ]
 }
