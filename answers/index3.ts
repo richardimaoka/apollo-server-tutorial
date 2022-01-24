@@ -6,8 +6,6 @@ const typeDefs = gql`
     booleanValue: Boolean
     intValue: Int
     floatValue: Float
-
-    arrayOfInts: [Int]
   }
 `;
 

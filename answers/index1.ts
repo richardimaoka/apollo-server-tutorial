@@ -1,14 +1,2 @@
-import { ApolloServer, gql } from "apollo-server";
-
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`;
-
-const server = new ApolloServer({ typeDefs, mocks: true });
-
-// The `listen` method launches a web server.
-server.listen().then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`);
-});
+export const s: string = "good morning world";
+console.log(s);
