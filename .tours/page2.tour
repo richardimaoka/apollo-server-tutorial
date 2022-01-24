@@ -19,7 +19,7 @@
     },
     {
       "file": "index.ts",
-      "description": "Result: `index.ts` に最小限のapollo serverのコードをコピーしました。\n\nAction: 以下のコマンドを入力してください。\n\n>> npm run start\n\nResult: 以下のように表示されます。\n\n```\n[INFO] 14:30:40 ts-node-dev ver. 1.1.8 (using ts-node ver. 9.1.1, typescript ver. 4.5.4)\n🚀  Server ready at http://localhost:4000/\n```\n\n\nAction: ブラウザで http://localhost:4000/ を開いてください",
+      "description": "Result: `index.ts` に最小限のapollo serverのコードをコピーしました。\n\nAction: 以下のコマンドを入力してください。\n\n>> npm run start &\n\nResult: 以下のように表示されます。\n\n```\n[INFO] 14:30:40 ts-node-dev ver. 1.1.8 (using ts-node ver. 9.1.1, typescript ver. 4.5.4)\n🚀  Server ready at http://localhost:4000/\n```\n\n\nAction: ブラウザで http://localhost:4000/ を開いてください",
       "pattern": "^[^\\S\\n]*import \\{ ApolloServer, gql \\} from \"apollo-server\";"
     },
     {
