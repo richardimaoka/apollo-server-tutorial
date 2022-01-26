@@ -1,5 +1,10 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
   "title": "page3",
-  "steps": []
+  "steps": [
+    {
+      "title": "Introduction",
+      "description": "## apollo server でいくつかの型を利用してみる\n\nAction: Ctrl+Shift+`を押してください。\n\nResult: もう一つのターミナルが開きます。これは`ts-node-dev`を走らせながら別のコマンドを実行するために必要です。\n![2022-01-19_00h08_47.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/75738/dbe15293-e1c1-4a32-e22d-38f56359e666.png)\n\nAction: 先程新しく開いたターミナルで、以下のコマンドを入力してください。\n\n>> npm run start"
+    }
+  ]
 }
