@@ -2,12 +2,7 @@
 
 # ## Apollo Server でいくつかの型を利用してみる
 
-# 再掲ですが、ここまでの手順に沿っていれば、以下の2つのターミナルを立ち上げているはずです。
-
-# - ターミナル1: `npm run start`を走らせ続けている状態
-# - ターミナル2: 入力待ちの状態
-
-# :large_orange_diamond: Action: ターミナル2で、以下のコマンドを入力してください。
+# :large_orange_diamond: Action: メインターミナルで、以下のコマンドを入力してください。
 
 # ```terminal: メイン (ターミナル)
 cp answers/index3.ts index.ts
@@ -47,7 +42,7 @@ cp answers/index3.ts index.ts
 
 # ![2022-01-26_23h49_43.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/75738/6ffedafe-4396-4698-c63f-b6d0db352697.png)
 
-# :large_orange_diamond: Action: ターミナル2で、以下のコマンドを入力してください。
+# :large_orange_diamond: Action: 以下のコマンドを入力してください。
 
 # ```terminal: メイン (ターミナル)
 cp answers/index4.ts index.ts
@@ -61,7 +56,7 @@ cp answers/index4.ts index.ts
 
 # ![2022-01-26_23h51_24.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/75738/a781fcde-5c6e-60ad-9ad7-7c314299ce61.png)
 
-# ApolloServerのmockは、Array型に対して要素数2のArrayを自動生成してくれます。
+# Apollo Serverのmockは、Array型に対して要素数2のArrayを自動生成してくれます。
 
 # :large_orange_diamond: Action: 以下のコマンドを入力してください。
 

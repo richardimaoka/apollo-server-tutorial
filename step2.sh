@@ -1,13 +1,8 @@
 #!/bin/sh
 
-# ## apollo server のインストールと実行
+# ## Apollo Server のインストールと実行
 
-# ここまでの手順に沿っていれば、以下の2つのターミナルを立ち上げているはずです。
-
-# - ターミナル1: `npm run start`を走らせ続けている状態
-# - ターミナル2: 入力待ちの状態
-
-# :large_orange_diamond: Action: 入力待ちのターミナル2で以下のコマンドを入力してください。
+# :large_orange_diamond: Action: 入力待ちのメインターミナルで以下のコマンドを入力してください。
 
 # ```terminal: メイン (ターミナル)
 npm install apollo-server graphql
@@ -19,11 +14,11 @@ npm install apollo-server graphql
 cp answers/index2.ts index.ts
 # ```
 
-# :white_check_mark: Result: `index.ts` に最小限のapollo serverのコードをコピーしました。
+# :white_check_mark: Result: `index.ts` に最小限のApollo Serverのコードをコピーしました。
 
-# :white_check_mark: Result: `npm run start`を走らせ続けているーミナル1で、以下のように表示されます。
+# :white_check_mark: Result: ts-node-devターミナルで、以下のように表示されます。
 
-# ```console
+# ```terminal: ts-node-dev (ターミナル)
 # [INFO] 14:30:40 ts-node-dev ver. 1.1.8 (using ts-node ver. 9.1.1, typescript ver. 4.5.4)
 # 🚀  Server ready at http://localhost:4000/
 # ```
@@ -56,7 +51,7 @@ cp answers/index2.ts index.ts
 
 # ![2022-01-25_00h36_15.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/75738/07b28d64-adec-5674-d2c3-6b0d1a2d6572.png)
 
-# Apollo Studioはapollo serverの開発に欠かせないツールです。次のチャプターではGraph QLの型とともに、Apollo Studioの基本的な使い方もあわせて説明しましょう。
+# Apollo Studio ExplorerはApolloでの開発に欠かせないツールです。次のチャプターではGraph QLの型とともに、Apollo Studio Explorerの基本的な使い方もあわせて説明しましょう。
 
 # <details><summary>:grey_question: 実装を書いてないのに、勝手に"Hello World"という文字列が返ってくるのはなぜ？</summary><div>
 
@@ -66,6 +61,9 @@ cp answers/index2.ts index.ts
 # `ApolloServer`に`mocks: true`を渡しているため、Resolverの実装を書かなくてもString型のmock値"hello world"が返ってきます。
 
 # mockの意味は次の「Apollo Server でいくつかの型を利用してみる」を見ていただければ、より明確になります。mockを使わずResolverを書いて実践的なGraphQLサーバーを開発する方法は次のチュートリアルで解説します。
+
+# ---
+
 # </div></details>
 
 # <details><summary>:grey_question: <a href="https://www.apollographql.com/docs/studio/explorer/explorer/">Apollo Studio Explorer</a>じゃなくて<a href="https://github.com/graphql/graphql-playground">Graph QL Playground</a>、もしくは<a href="https://github.com/graphql/graphiql">GraphiQL</a>を使いたいのだけど？</summary><div>
@@ -81,6 +79,8 @@ cp answers/index2.ts index.ts
 # …でしたが、上記GitHubイシューを見ると、2021年になってからまたいくつか方針の変更があったようですね。
 
 # なんにせよ、Apollo ServerはデフォルトでApollo Studio Explorerを利用するようになったので、このチュートリアルでもそちらを使っています。
+
+# ---
 
 # </div></details>
 

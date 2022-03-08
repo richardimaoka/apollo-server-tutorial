@@ -4,7 +4,7 @@ GraphQL を学びたい JavaScript 初心者へ向けてチュートリアルを
 
 理解の前に「動かす感覚」を味わってもらうため、**ほぼ全てコピー&ペーストのみで**、素早く進められるチュートリアルになっています。
 
-<details><summary>:grey_question: Apolloではなく、先にNexusやHasuraなど他のサーバーサイドGraphQL技術を学ぶか迷っているのですが？</summary>
+<details><summary>:grey_question: Apolloではなく、先にNexusやHasuraなど他のサーバーサイドGraphQL技術を学ぶか迷っています。</summary>
 
 GraphQL にはクライアントサイドとサーバーサイドがありますが、このチュートリアルで扱うのはサーバーサイドです。
 
@@ -35,18 +35,23 @@ GraphQL にはクライアントサイドとサーバーサイドがあります
 一連のチュートリアルを学んで GraphQL を動かす感覚をつかんでもらえたら、その後 Apollo の公式チュートリアルで学び直すのもおすすめです。最初から Apollo 公式チュートリアルだけで学ぶより、そのほうが早くなるように工夫してチュートリアルを構成しています。
 
 ---
+
+</details>
+
 ## gitレポジトリのクローン
 
 :large_orange_diamond: Action: ターミナルで以下の一連のコマンドを実行してください
 
-```
+```terminal: メイン (ターミナル)
 git clone https://github.com/richardimaoka/apollo-server-tutorial.git
 cd apollo-server-tutorial
 ```
 
+後ほど別のターミナルを立ち上げるので、このターミナルは `メイン` と表記します。
+
 ## TypeScript環境のセットアップ
-#
-:large_orange_diamond: Action: ターミナルで以下のコマンドを実行してください
+
+:large_orange_diamond: Action: ターミナルで以下のコマンドを実行してください。
 
 ```terminal:メイン (ターミナル)
 npm init -yes
@@ -89,9 +94,6 @@ TypeScriptをwatchして実行するための `ts-node-dev` を導入します�
 
 ```terminal: メイン (ターミナル)
 npm install ts-node-dev
-```
-
-```terminal: メイン (ターミナル)
 npm set-script start "ts-node-dev --respawn index.ts"
 ```
 
@@ -103,15 +105,15 @@ npm set-script start "ts-node-dev --respawn index.ts"
   }
 ```
 
-:large_orange_diamond: Action: 以下のコマンドを入力してください。
+:large_orange_diamond: Action: **別のターミナルを立ち上げ**、以下のコマンドを入力してください。
 
-```terminal: メイン (ターミナル)
+```terminal: ts-node-dev (ターミナル)
 npm run start
 ```
 
 :white_check_mark: Result: 以下のように`hello world`が表示されます。
 
-```console
+```terminal: ts-node-dev (ターミナル)
 > start
 > ts-node-dev --respawn index.ts
 
@@ -121,12 +123,7 @@ hello world
 
 次に`index.ts`の内容を書き換えると、watch機能によってリアルタイムでターミナルに反映されることを確認してみましょう。
 
-:large_orange_diamond: Action: 別のターミナルを新たに立ち上げてください。以下の2つのターミナルが立ち上がった状態になるはずです。
-
-- ターミナル1: `npm run start`を走らせ続けている状態
-- ターミナル2: 入力待ちの状態
-
-:large_orange_diamond: Action: 入力待ちのターミナル2で、以下のコマンドを入力してください。
+:large_orange_diamond: Action: メインのターミナルで、以下のコマンドを入力してください。
 
 ```terminal: メイン (ターミナル)
 cp answers/index1.ts index.ts
@@ -140,23 +137,18 @@ cp answers/index1.ts index.ts
  console.log(s);
 ```
 
-:white_check_mark: Result: `npm run start`を走らせているターミナル1では、`hello world`の表示が`good morning world`に変更されます。
+:white_check_mark: Result: `npm run start` を走らせているts-node-dev ターミナルでは、`hello world`の表示が`good morning world`に変更されます。
 
-```console
+```terminal: ts-node-dev (ターミナル)
 [INFO] 14:15:33 Restarting: /workspaces/apollo-server-tutorial/index.ts has been modified
 good morning world
 ```
 
-ここまでで、簡単なTypeScriptコードをwatchして実行できました。コードを書き換えたら、ts-node-devのwatch機能がすぐにサーバーを再起動してくれるので、apollo serverの開発が快適になります。
+ここまでで、簡単なTypeScriptコードをwatchして実行できました。コードを書き換えたら、ts-node-devのwatch機能がすぐにサーバーを再起動してくれるので、Apollo Serverでの開発が快適になります。
 
-## apollo server のインストールと実行
+## Apollo Server のインストールと実行
 
-ここまでの手順に沿っていれば、以下の2つのターミナルを立ち上げているはずです。
-
-- ターミナル1: `npm run start`を走らせ続けている状態
-- ターミナル2: 入力待ちの状態
-
-:large_orange_diamond: Action: 入力待ちのターミナル2で以下のコマンドを入力してください。
+:large_orange_diamond: Action: 入力待ちのメインターミナルで以下のコマンドを入力してください。
 
 ```terminal: メイン (ターミナル)
 npm install apollo-server graphql
@@ -168,11 +160,11 @@ npm install apollo-server graphql
 cp answers/index2.ts index.ts
 ```
 
-:white_check_mark: Result: `index.ts` に最小限のapollo serverのコードをコピーしました。
+:white_check_mark: Result: `index.ts` に最小限のApollo Serverのコードをコピーしました。
 
-:white_check_mark: Result: `npm run start`を走らせ続けているーミナル1で、以下のように表示されます。
+:white_check_mark: Result: ts-node-devターミナルで、以下のように表示されます。
 
-```console
+```terminal: ts-node-dev (ターミナル)
 [INFO] 14:30:40 ts-node-dev ver. 1.1.8 (using ts-node ver. 9.1.1, typescript ver. 4.5.4)
 🚀  Server ready at http://localhost:4000/
 ```
@@ -205,7 +197,7 @@ cp answers/index2.ts index.ts
 
 ![2022-01-25_00h36_15.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/75738/07b28d64-adec-5674-d2c3-6b0d1a2d6572.png)
 
-Apollo Studioはapollo serverの開発に欠かせないツールです。次のチャプターではGraph QLの型とともに、Apollo Studioの基本的な使い方もあわせて説明しましょう。
+Apollo Studio ExplorerはApolloでの開発に欠かせないツールです。次のチャプターではGraph QLの型とともに、Apollo Studio Explorerの基本的な使い方もあわせて説明しましょう。
 
 <details><summary>:grey_question: 実装を書いてないのに、勝手に"Hello World"という文字列が返ってくるのはなぜ？</summary><div>
 
@@ -215,6 +207,9 @@ const server = new ApolloServer({ typeDefs, mocks: true });
 `ApolloServer`に`mocks: true`を渡しているため、Resolverの実装を書かなくてもString型のmock値"hello world"が返ってきます。
 
 mockの意味は次の「Apollo Server でいくつかの型を利用してみる」を見ていただければ、より明確になります。mockを使わずResolverを書いて実践的なGraphQLサーバーを開発する方法は次のチュートリアルで解説します。
+
+---
+
 </div></details>
 
 <details><summary>:grey_question: <a href="https://www.apollographql.com/docs/studio/explorer/explorer/">Apollo Studio Explorer</a>じゃなくて<a href="https://github.com/graphql/graphql-playground">Graph QL Playground</a>、もしくは<a href="https://github.com/graphql/graphiql">GraphiQL</a>を使いたいのだけど？</summary><div>
@@ -230,6 +225,8 @@ GraphQL登場からしばらくして出てきたApolloは、GraphiQLではな�
 …でしたが、上記GitHubイシューを見ると、2021年になってからまたいくつか方針の変更があったようですね。
 
 なんにせよ、Apollo ServerはデフォルトでApollo Studio Explorerを利用するようになったので、このチュートリアルでもそちらを使っています。
+
+---
 
 </div></details>
 
@@ -247,15 +244,11 @@ https://www.apollographql.com/docs/studio/explorer/sandbox/
 
 ---
 
+</div></details>
 
 ## Apollo Server でいくつかの型を利用してみる
 
-再掲ですが、ここまでの手順に沿っていれば、以下の2つのターミナルを立ち上げているはずです。
-
-- ターミナル1: `npm run start`を走らせ続けている状態
-- ターミナル2: 入力待ちの状態
-
-:large_orange_diamond: Action: ターミナル2で、以下のコマンドを入力してください。
+:large_orange_diamond: Action: メインターミナルで、以下のコマンドを入力してください。
 
 ```terminal: メイン (ターミナル)
 cp answers/index3.ts index.ts
@@ -295,7 +288,7 @@ const typeDefs = gql`
 
 ![2022-01-26_23h49_43.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/75738/6ffedafe-4396-4698-c63f-b6d0db352697.png)
 
-:large_orange_diamond: Action: ターミナル2で、以下のコマンドを入力してください。
+:large_orange_diamond: Action: 以下のコマンドを入力してください。
 
 ```terminal: メイン (ターミナル)
 cp answers/index4.ts index.ts
@@ -309,7 +302,7 @@ cp answers/index4.ts index.ts
 
 ![2022-01-26_23h51_24.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/75738/a781fcde-5c6e-60ad-9ad7-7c314299ce61.png)
 
-ApolloServerのmockは、Array型に対して要素数2のArrayを自動生成してくれます。
+Apollo Serverのmockは、Array型に対して要素数2のArrayを自動生成してくれます。
 
 :large_orange_diamond: Action: 以下のコマンドを入力してください。
 

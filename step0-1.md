@@ -4,7 +4,7 @@ GraphQL を学びたい JavaScript 初心者へ向けてチュートリアルを
 
 理解の前に「動かす感覚」を味わってもらうため、**ほぼ全てコピー&ペーストのみで**、素早く進められるチュートリアルになっています。
 
-<details><summary>:grey_question: Apolloではなく、先にNexusやHasuraなど他のサーバーサイドGraphQL技術を学ぶか迷っているのですが？</summary>
+<details><summary>:grey_question: Apolloではなく、先にNexusやHasuraなど他のサーバーサイドGraphQL技術を学ぶか迷っています。</summary>
 
 GraphQL にはクライアントサイドとサーバーサイドがありますが、このチュートリアルで扱うのはサーバーサイドです。
 
@@ -35,3 +35,5 @@ GraphQL にはクライアントサイドとサーバーサイドがあります
 一連のチュートリアルを学んで GraphQL を動かす感覚をつかんでもらえたら、その後 Apollo の公式チュートリアルで学び直すのもおすすめです。最初から Apollo 公式チュートリアルだけで学ぶより、そのほうが早くなるように工夫してチュートリアルを構成しています。
 
 ---
+
+</details>
