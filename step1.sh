@@ -12,13 +12,13 @@ npm init -yes
 
 # :large_orange_diamond: Action: 以下のコマンドを入力してください。
 
-# ```
+# ```terminal: メイン (ターミナル)
 # npm install typescript
 # ```
 
 # :large_orange_diamond: Action: 以下のコマンドを入力してください。
 
-# ```
+# ```terminal: メイン (ターミナル)
 # npx tsc -init
 # ```
 
@@ -28,7 +28,7 @@ npm init -yes
 
 # :large_orange_diamond: Action: 以下のコマンドを入力してください。
 
-# ```
+# ```terminal: メイン (ターミナル)
 # cp answers/index0.ts index.ts
 # ```
 
@@ -43,11 +43,11 @@ npm init -yes
 
 # :large_orange_diamond: Action: 以下の一連のコマンドを入力してください。
 
-# ```
+# ```terminal: メイン (ターミナル)
 # npm install ts-node-dev
 # ```
 
-# ```
+# ```terminal: メイン (ターミナル)
 # npm set-script start "ts-node-dev --respawn index.ts"
 # ```
 
@@ -61,7 +61,7 @@ npm init -yes
 
 # :large_orange_diamond: Action: 以下のコマンドを入力してください。
 
-# ```
+# ```terminal: メイン (ターミナル)
 # npm run start
 # ```
 
@@ -84,8 +84,8 @@ npm init -yes
 
 # :large_orange_diamond: Action: 入力待ちのターミナル2で、以下のコマンドを入力してください。
 
-# ```
-# cp answers/index1.ts index.ts
+# ```terminal: メイン (ターミナル)
+cp answers/index1.ts index.ts
 # ```
 
 # :white_check_mark: Result: 以下のようにファイルが書き換わっています。
