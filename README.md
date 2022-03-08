@@ -35,116 +35,116 @@ GraphQL にはクライアントサイドとサーバーサイドがあります
 一連のチュートリアルを学んで GraphQL を動かす感覚をつかんでもらえたら、その後 Apollo の公式チュートリアルで学び直すのもおすすめです。最初から Apollo 公式チュートリアルだけで学ぶより、そのほうが早くなるように工夫してチュートリアルを構成しています。
 
 ---
-#!/bin/sh
 ## gitレポジトリのクローン
 
-# :large_orange_diamond: Action: ターミナルで以下の一連のコマンドを実行してください
+:large_orange_diamond: Action: ターミナルで以下の一連のコマンドを実行してください
 
 ```
 git clone https://github.com/richardimaoka/apollo-server-tutorial.git
 cd apollo-server-tutorial
-```#!/bin/sh
-# ## TypeScript環境のセットアップ
+```
+
+## TypeScript環境のセットアップ
 #
-# :large_orange_diamond: Action: ターミナルで以下のコマンドを実行してください
+:large_orange_diamond: Action: ターミナルで以下のコマンドを実行してください
 
-# ```terminal:メイン (ターミナル)
+```terminal:メイン (ターミナル)
 npm init -yes
-# ```
+```
 
-# :white_check_mark: Result: `package.json` が生成されます
+:white_check_mark: Result: `package.json` が生成されます
 
-# :large_orange_diamond: Action: 以下のコマンドを入力してください。
+:large_orange_diamond: Action: 以下のコマンドを入力してください。
 
-# ```
-# npm install typescript
-# ```
+```
+npm install typescript
+```
 
-# :large_orange_diamond: Action: 以下のコマンドを入力してください。
+:large_orange_diamond: Action: 以下のコマンドを入力してください。
 
-# ```
-# npx tsc -init
-# ```
+```
+npx tsc -init
+```
 
-# :white_check_mark: Result: ファイル `tsconfig.json` が生成されます
+:white_check_mark: Result: ファイル `tsconfig.json` が生成されます
 
-# これでTypeScriptをコンパイルする環境が整いました。次の数アクションで簡単なTypeScriptコードを実行してみます。
+これでTypeScriptをコンパイルする環境が整いました。次の数アクションで簡単なTypeScriptコードを実行してみます。
 
-# :large_orange_diamond: Action: 以下のコマンドを入力してください。
+:large_orange_diamond: Action: 以下のコマンドを入力してください。
 
-# ```
-# cp answers/index0.ts index.ts
-# ```
+```
+cp answers/index0.ts index.ts
+```
 
-# :white_check_mark: Result: コピーされたファイルは以下のとおりです。
+:white_check_mark: Result: コピーされたファイルは以下のとおりです。
 
-# ```ts:index.ts
-# export const s: string = "hello world";
-# console.log(s);
-# ```
+```ts:index.ts
+export const s: string = "hello world";
+console.log(s);
+```
 
-# TypeScriptをwatchして実行するための `ts-node-dev` を導入します。
+TypeScriptをwatchして実行するための `ts-node-dev` を導入します。
 
-# :large_orange_diamond: Action: 以下の一連のコマンドを入力してください。
+:large_orange_diamond: Action: 以下の一連のコマンドを入力してください。
 
-# ```
-# npm install ts-node-dev
-# ```
+```
+npm install ts-node-dev
+```
 
-# ```
-# npm set-script start "ts-node-dev --respawn index.ts"
-# ```
+```
+npm set-script start "ts-node-dev --respawn index.ts"
+```
 
-# :white_check_mark: Result: `package.json`に以下が挿入されます。
+:white_check_mark: Result: `package.json`に以下が挿入されます。
 
-# ```json:package.json
-#   "scripts": {
-#     "start": "ts-node-dev --respawn index.ts"
-#   }
-# ```
+```json:package.json
+  "scripts": {
+    "start": "ts-node-dev --respawn index.ts"
+  }
+```
 
-# :large_orange_diamond: Action: 以下のコマンドを入力してください。
+:large_orange_diamond: Action: 以下のコマンドを入力してください。
 
-# ```
-# npm run start
-# ```
+```
+npm run start
+```
 
-# :white_check_mark: Result: 以下のように`hello world`が表示されます。
+:white_check_mark: Result: 以下のように`hello world`が表示されます。
 
-# ```console
-# > start
-# > ts-node-dev --respawn index.ts
+```console
+> start
+> ts-node-dev --respawn index.ts
 
-# [INFO] 14:12:04 ts-node-dev ver. 1.1.8 (using ts-node ver. 9.1.1, typescript ver. 4.5.4)
-# hello world
-# ```
+[INFO] 14:12:04 ts-node-dev ver. 1.1.8 (using ts-node ver. 9.1.1, typescript ver. 4.5.4)
+hello world
+```
 
-# 次に`index.ts`の内容を書き換えると、watch機能によってリアルタイムでターミナルに反映されることを確認してみましょう。
+次に`index.ts`の内容を書き換えると、watch機能によってリアルタイムでターミナルに反映されることを確認してみましょう。
 
-# :large_orange_diamond: Action: 別のターミナルを新たに立ち上げてください。以下の2つのターミナルが立ち上がった状態になるはずです。
+:large_orange_diamond: Action: 別のターミナルを新たに立ち上げてください。以下の2つのターミナルが立ち上がった状態になるはずです。
 
-# - ターミナル1: `npm run start`を走らせ続けている状態
-# - ターミナル2: 入力待ちの状態
+- ターミナル1: `npm run start`を走らせ続けている状態
+- ターミナル2: 入力待ちの状態
 
-# :large_orange_diamond: Action: 入力待ちのターミナル2で、以下のコマンドを入力してください。
+:large_orange_diamond: Action: 入力待ちのターミナル2で、以下のコマンドを入力してください。
 
-# ```
-# cp answers/index1.ts index.ts
-# ```
+```
+cp answers/index1.ts index.ts
+```
 
-# :white_check_mark: Result: 以下のようにファイルが書き換わっています。
+:white_check_mark: Result: 以下のようにファイルが書き換わっています。
 
-# ```diff:index.ts
-# -export const s: string = "hello world";
-# +export const s: string = "good morning world";
-#  console.log(s);
-# ```
+```diff:index.ts
+-export const s: string = "hello world";
++export const s: string = "good morning world";
+ console.log(s);
+```
 
-# :white_check_mark: Result: `npm run start`を走らせているターミナル1では、`hello world`の表示が`good morning world`に変更されます。
+:white_check_mark: Result: `npm run start`を走らせているターミナル1では、`hello world`の表示が`good morning world`に変更されます。
 
-# ```console
-# [INFO] 14:15:33 Restarting: /workspaces/apollo-server-tutorial/index.ts has been modified
-# good morning world
-# ```
+```console
+[INFO] 14:15:33 Restarting: /workspaces/apollo-server-tutorial/index.ts has been modified
+good morning world
+```
 
-# ここまでで、簡単なTypeScriptコードをwatchして実行できました。コードを書き換えたら、ts-node-devのwatch機能がすぐにサーバーを再起動してくれるので、apollo serverの開発が快適になります。
+ここまでで、簡単なTypeScriptコードをwatchして実行できました。コードを書き換えたら、ts-node-devのwatch機能がすぐにサーバーを再起動してくれるので、apollo serverの開発が快適になります。

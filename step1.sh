@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # ## TypeScript環境のセットアップ
 #
 # :large_orange_diamond: Action: ターミナルで以下のコマンドを実行してください

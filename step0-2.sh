@@ -1,5 +1,5 @@
 #!/bin/sh
-## gitレポジトリのクローン
+# ## gitレポジトリのクローン
 
 # :large_orange_diamond: Action: ターミナルで以下の一連のコマンドを実行してください
 
