@@ -38,13 +38,13 @@ GraphQL にはクライアントサイドとサーバーサイドがあります
 
 </details>
 
-## gitレポジトリのクローン
+## git レポジトリのクローン
 
 :large_orange_diamond: Action: ターミナルで以下の一連のコマンドを実行してください
 
 ```terminal: メイン (ターミナル)
-git clone https://github.com/richardimaoka/apollo-server-tutorial.git
-cd apollo-server-tutorial
+git clone https://github.com/richardimaoka/tutorial-apollo-server-getting-started.git
+cd tutorial-apollo-server-getting-started
 ```
 
 後ほど別のターミナルを立ち上げるので、このターミナルは `メイン` と表記します。
@@ -157,7 +157,6 @@ npm install apollo-server graphql
 :large_orange_diamond: Action: ts-node-devを走らせているターミナルで、Ctrl+Cの後ts-node-devを再起動してください
 
 ```terminal: ts-node-dev (ターミナル)
-# Ctrl + C
 npm run start
 ```
 

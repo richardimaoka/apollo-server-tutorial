@@ -37,3 +37,14 @@ GraphQL にはクライアントサイドとサーバーサイドがあります
 ---
 
 </details>
+
+## git レポジトリのクローン
+
+:large_orange_diamond: Action: ターミナルで以下の一連のコマンドを実行してください
+
+```terminal: メイン (ターミナル)
+git clone https://github.com/richardimaoka/tutorial-apollo-server-getting-started.git
+cd tutorial-apollo-server-getting-started
+```
+
+後ほど別のターミナルを立ち上げるので、このターミナルは `メイン` と表記します。
