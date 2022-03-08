@@ -1,14 +1,6 @@
 #!/bin/sh
 
-# ## Apollo Server のインストールと実行
-
-# :large_orange_diamond: Action: 入力待ちのメインターミナルで以下のコマンドを入力してください。
-
-# ```terminal: メイン (ターミナル)
-npm install apollo-server graphql
-# ```
-
-# :large_orange_diamond: Action: 続けて以下のコマンドを入力してください。
+# :large_orange_diamond: Action: メインターミナルで以下のコマンドを入力してください。
 
 # ```terminal: メイン (ターミナル)
 cp answers/index2.ts index.ts
