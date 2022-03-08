@@ -4,7 +4,6 @@
 # :large_orange_diamond: Action: ターミナルで以下のコマンドを実行してください
 
 # ```terminal:メイン (ターミナル)
-ter
 npm init -yes
 # ```
 
