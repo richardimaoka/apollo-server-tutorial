@@ -154,7 +154,14 @@ good morning world
 npm install apollo-server graphql
 ```
 
-:large_orange_diamond: Action: 続けて以下のコマンドを入力してください。
+:large_orange_diamond: Action: ts-node-devを走らせているターミナルで、Ctrl+Cの後ts-node-devを再起動してください
+
+```terminal: ts-node-dev (ターミナル)
+# Ctrl + C
+npm run start
+```
+
+:large_orange_diamond: Action: メインターミナルで以下のコマンドを入力してください。
 
 ```terminal: メイン (ターミナル)
 cp answers/index2.ts index.ts
